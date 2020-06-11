@@ -1,3 +1,23 @@
+html,
 body {
   font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.left-side {
+  display: flex;
+
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 10%;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
