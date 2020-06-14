@@ -5,10 +5,15 @@ body {
   padding: 0;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1 fr;
+}
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 2%;
+  padding: 38px;
 }
 
 .left-side {
@@ -17,7 +22,32 @@ body {
 }
 
 .nav-wrapper > .left-side > div {
-  margin-right: 10%;
+  margin-right: 20px;
   font-size: 0.9em;
   text-transform: uppercase;
+}
+
+.nav-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.portfolio-items-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
