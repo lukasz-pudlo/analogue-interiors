@@ -8,12 +8,14 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1 fr;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 38px;
+  padding: 5%;
 }
 
 .left-side {
@@ -50,4 +52,15 @@ body {
 .portfolio-items-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+}
+
+.img-text-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
