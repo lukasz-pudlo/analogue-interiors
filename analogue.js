@@ -30,4 +30,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // When the window is resized, we want to fire the debouncedA function
   window.onresize = debouncedA;
+
+
 });
+
+var root = document.documentElement;var btn = document.getElementById("colorToggle");btn.addEventListener("click", e => {    root.style.setProperty("--background", getComputedStyle(root).getPropertyValue('--background') === "#333" ? "#eee" : "#333");    root.style.setProperty("--foreground", getComputedStyle(root).getPropertyValue('--foreground') === "#eee" ? "#333" : "#eee");})

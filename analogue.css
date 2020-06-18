@@ -3,15 +3,27 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .left-side {
   font-size: 1.5em;
 }
 
+.brand {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand > * + * {
+  margin-left: 10px;
+}
+
 .brand > div {
   font-size: 2.5em;
 }
+
 
 .subtitle {
   font-size: 1.5em;
@@ -81,4 +93,9 @@ body {
 img:not([alt]),
 img[alt=""] {
   border: 3px solid red;
+}
+
+.colorToggle {
+  width: 50px;
+  height: 50px;
 }
