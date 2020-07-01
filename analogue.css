@@ -14,6 +14,7 @@ body {
 .brand {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .brand > * + * {
@@ -22,6 +23,7 @@ body {
 
 .brand > div {
   font-size: 2.5em;
+  white-space: nowrap;
 }
 
 
@@ -45,7 +47,7 @@ body {
 
 .left-side {
   display: flex;
-
+  align-items: center;
 }
 
 .nav-wrapper > .left-side > div {
@@ -77,8 +79,15 @@ body {
 .portfolio-items-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5vw;
+  /*Experimenting with border bottom*/
+  border-bottom: solid;
 }
+/*  Get me every third item and of those, only ones that are in the last three items */
+.portfolio-items-wrapper:nth-child(3n+1):nth-last-child(-n+3),
+/* Now get me every one after that same collection too. */
+.portfolio-items-wrapper:nth-child(3n+1):nth-last-child(-n+3) ~ .portfolio-items-wrapper {
+  border-bottom: 0;}
 
 .portfolio-item-wrapper {
   position: relative;
@@ -90,6 +99,7 @@ body {
   object-fit: cover;
 }
 
+/*to make sure all images have alt text*/
 img:not([alt]),
 img[alt=""] {
   border: 3px solid red;
@@ -98,4 +108,12 @@ img[alt=""] {
 .colorToggle {
   width: 100px;
   height: 50px;
+}
+
+/*Making sure the content is visible on iPhone X, notched screens*/
+@supports(padding: max(0px)) {
+    .body {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
 }
